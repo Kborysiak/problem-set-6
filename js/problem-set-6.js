@@ -11,7 +11,9 @@
  */
 
 function sayHello() {
-
+  let sayHelloStroke = document.getElementById("canvas1").getContext("2d");
+  sayHelloStroke.font = "48px Sans-Serif";
+  sayHelloStroke.strokeText("Hello, World!", 10, 50);
 }
 
 /*
@@ -38,9 +40,30 @@ function sayHello() {
  */
 
 function drawRectangle() {
+  let rectangle = document.getElementById("canvas2").getContext("2d");
+  let rectHeight;
+  let rectWidth;
+  let rectX;
+  let rectY;
+  //Add limits to width height x and y at home.
+  do{rectHeight = Number(prompt("Height:"))
+}while(rectHeight < 1 && rectHeight );
+console.log(rectHeight)
 
+  do{rectWidth = Number(prompt("Width:"))
+}while(rectWidth <1 && rectWidth );
+console.log(rectWidth)
+
+  do{rectX = Number(prompt("X-Coordinate:"))
+}while(rectX < 5)
+console.log(rectX)
+
+do{rectY = Number(prompt("Y-Coordinate:"))
+}while(rectY < 5)
+console.log(rectY)
+rectangle.clearRect(0, 0, canvas2.width, canvas2.height);
+rectangle.strokeRect(rectX, rectY, rectWidth, rectHeight);
 }
-
 /*
  * Color. 3 points.
  *
@@ -123,6 +146,8 @@ function drawTriangle() {
  */
 
 function drawSmileyFace() {
+  let  smileyFace = document.getElementById("canvas5").getContext("2d");
+  smileyFace.beginPath();
 
 }
 
