@@ -47,22 +47,30 @@ function drawRectangle() {
   let rectY;
   //Add limits to width height x and y at home.
   do{rectHeight = Number(prompt("Height:"))
-}while(rectHeight < 1 && rectHeight );
+}while(rectHeight >= canvas2.height && rectHeight < 1);
 console.log(rectHeight)
 
   do{rectWidth = Number(prompt("Width:"))
-}while(rectWidth <1 && rectWidth );
+}while(rectWidth >= canvas2.width && rectWidth < 1);
 console.log(rectWidth)
 
   do{rectX = Number(prompt("X-Coordinate:"))
-}while(rectX < 5)
+}while(rectX <= canvas2.width && rectX < 5)
 console.log(rectX)
 
 do{rectY = Number(prompt("Y-Coordinate:"))
-}while(rectY < 5)
-console.log(rectY)
-rectangle.clearRect(0, 0, canvas2.width, canvas2.height);
-rectangle.strokeRect(rectX, rectY, rectWidth, rectHeight);
+}while(rectY <= canvas2.height && rectY < 5)
+
+if(rectHeight > canvas2.height && rectWidth > canvas2.width && rectX > canvas2.width && rectY > canvas2.height){
+  alert("These rectangle dimensions are improper! Please try again!");
+}
+else{
+  console.log(rectY)
+  rectangle.clearRect(0, 0, canvas2.width, canvas2.height);
+  rectangle.strokeRect(rectX, rectY, rectWidth, rectHeight);
+}
+
+
 }
 /*
  * Color. 3 points.
