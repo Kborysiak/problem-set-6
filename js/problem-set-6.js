@@ -98,6 +98,22 @@ else{
  */
 
 function drawColoredRectangle() {
+let coloredRectangle = document.getElementById("canvas3").getContext("2d");
+coloredRectangle.clearRect(0, 0, canvas3.width, canvas3.height);
+let userInputColor;
+let drawEnabled = false;
+
+userInputColor = prompt("Please enter a color.")
+if(userInputColor == "yellow" || userInputColor == "red" || userInputColor == "purple" || userInputColor == "orange" || userInputColor == "green" || userInputColor == "blue" || userInputColor == "black" ){
+  drawEnabled = true;
+}
+else{
+  alert("That is not a supported color, try again!");
+}
+if(drawEnabled == true){
+  coloredRectangle.fillStyle = userInputColor;
+  coloredRectangle.fillRect(10, 10, 100, 50);
+}
 
 }
 
@@ -131,6 +147,18 @@ function drawColoredRectangle() {
  */
 
 function drawTriangle() {
+let triangle = document.getElementById("canvas4").getContext("2d");
+let side1 = Number(prompt("Please enter a positive integer for your left side length."));
+let side2 = Number(prompt("Please enter a positive integer for your bottom side length."));
+let side3 = Number(prompt("Please enter a positive integer for your hypotenuse length."));
+let drawEnabled = false;
+triangle.clearRect(0, 0, canvas4.width, canvas4.height)
+console.log(side1);
+console.log(side2);
+console.log(side3);
+
+
+
 
 }
 
