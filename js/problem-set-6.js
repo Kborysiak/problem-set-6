@@ -108,7 +108,7 @@ if(userInputColor == "yellow" || userInputColor == "red" || userInputColor == "p
   drawEnabled = true;
 }
 else{
-  alert("That is not a supported color, try again!");
+  alert(`${userInputColor} is not a supported color, try again.`);
 }
 if(drawEnabled == true){
   coloredRectangle.fillStyle = userInputColor;
@@ -158,6 +158,7 @@ triangle.clearRect(0, 0, canvas4.width, canvas4.height)
 console.log(side1);
 console.log(side2);
 console.log(side3);
+
 
 
 
