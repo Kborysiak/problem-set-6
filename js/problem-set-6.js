@@ -151,6 +151,8 @@ let triangle = document.getElementById("canvas4").getContext("2d");
 let side1 = Number(prompt("Please enter a positive integer for your left side length."));
 let side2 = Number(prompt("Please enter a positive integer for your bottom side length."));
 let side3 = Number(prompt("Please enter a positive integer for your hypotenuse length."));
+let triangleX = 10;
+let triangleY = 10;
 let drawEnabled = false;
 triangle.clearRect(0, 0, canvas4.width, canvas4.height)
 console.log(side1);
